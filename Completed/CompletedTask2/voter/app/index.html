@@ -1,0 +1,117 @@
+<!-- HTML webpage for Voter Contract on Blockchain-->
+<!-- Author: Abhinav Kalra-->
+<!-- Date Time picker from https://github.com/uxsolutions/bootstrap-datepicker-->
+<!-- For Ethereum and Blockchain Workshop-->
+<html>
+  <head>
+    <title>The battle for Votes</title>
+    <link rel="stylesheet" href="css/app.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/> 
+  </head>
+  <body onload="doSomeStartupStuff()">
+    <div class="container" id="homediv">
+  <h2>Application for casting ballots</h2>
+  <div id="tabList"><ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#registerUserTab">Register to cast your vote</a></li>
+    <li><a data-toggle="tab" href="#castBallotTab">Vote for your Candidate</a></li>
+    <li><a data-toggle="tab" href="#vieweventsTab">View Logged Events</a></li>
+    </ul>
+  </div>
+  
+  <div class="tab-content" style="margin-top:20px">
+    <div id="registerUserTab" class="tab-pane fade in active">
+    <h3>New Voter Register here</h3>
+      <p>New voters register yourself before you cast your vote.</p>
+    
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="firstnameLabel">First Name :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="firstnameTxt" placeholder="Enter first name" style="width:30%">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="lastnameLabel">Last Name :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="lastnameTxt" placeholder="Enter last name" style="width:30%">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+     <label class="control-label" for="date">DOB</label>
+        <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" style="width:30%"/>
+        
+  </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" class="btn btn-primary" id="registerButton" onclick="registerVoter()">REGISTER</button>
+    </div>
+  </div style="margin-top:30px">
+   <div class="form-group">
+  <label id="regstatLabel" for="status"></label>
+  </div>
+</form>
+</div>
+    <div id="castBallotTab" class="tab-pane fade" >
+        <div class="container-fluid" style="height:70%">
+        <h3>Cast Vote for Your Hero</h3>
+        <p>Registered users can cast their vote here.</p>
+        <div class="row" style="height:10%;">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="voteridLabel">Enter your Voter ID :</label>
+            <input type="text" class="form-control col-sm-10" id="voteridTxt" placeholder="Enter Voter ID" style="width:30%">
+          </div>
+        </div>
+         <div class="row" style="height:70%;">  
+            <div class="col-lg-5" style="height:90%;">
+             
+              <div class="radio-inline">
+                <img src="./images/batman.png" class="img-circle center-block " alt="Ironman vote" width="60%" height="55%" >
+                <input type="radio" name="optradio" id="bradio">
+              </div>
+             </div>
+            <div class="col-lg-2" style="height:90%;">
+          
+            </div>
+            <div class="col-lg-5"style="height:90%;" >
+              <div class="radio-inline">
+              <img src="./images/ironman.png" class="img-circle center-block " alt="Ironman vote" width="50%" height="55%" >
+              <input type="radio" name="optradio" id="iradio">
+              </div>
+            </div>
+        </div>
+      <div class="row" style="height:20%">
+        <button type="button" class="btn btn-primary center-block" id="voteButton" onclick="castVote()">CAST VOTE</button>
+        </div>
+     </div>
+    </div>
+
+    <div id="vieweventsTab" class="tab-pane fade">
+
+      <h3>View Events Log</h3>
+      <p>Herein you can see events pertaining to casting of ballot</p>
+      <div class="container-fluid" style="height:70%">
+        <div class="row" style="height:90%">
+          <div class="col-lg-2" style="height:90%">
+        
+          </div>
+          <div class="col-lg-1" style="height:90%">
+          </div>  
+          <div class="col-lg-9" style="height:70%">
+            <div class="form-group">
+            <textarea readonly class="form-control" rows="15" id="balloteventTxtarea" style="width:80%;resize:none;"></textarea>
+            </div>
+          </div>
+        </div>  
+      </div>  
+    </div>
+
+  </body>
+</html>

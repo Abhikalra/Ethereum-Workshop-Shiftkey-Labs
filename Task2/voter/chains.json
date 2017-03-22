@@ -1,0 +1,11 @@
+{
+  "0xbebe6882a3603aea3e27270ad1aaaec3bb866a7f876171358f86a15056aacbea": {
+    "name": "development",
+    "contracts": {
+      "d10187770f5c15f20f0ce31e86028518970e5080c5fc02e7b625819037024aff": {
+        "address": "0x58662a808b83c874d3ac389462b2e40c6b3fcdad",
+        "name":    "MordorVote"
+      }
+    }
+  }
+}

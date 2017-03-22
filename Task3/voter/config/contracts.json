@@ -1,0 +1,10 @@
+{
+    "default": {
+        "gas": "auto",
+        "contracts": {
+            "MordorVote": {
+                "gas": 3500000
+            }
+        }
+    }
+}
