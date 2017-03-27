@@ -1,2 +1,2 @@
 # Ethereum-Workshop-Shiftkey-Labs
-# We weren't feeling upto writing a READAME :)
+We are way too lazy to write a READAME :)
