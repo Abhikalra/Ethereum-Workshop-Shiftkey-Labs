@@ -44,13 +44,6 @@ function castVote() {
     }
 }
 
-function viewIronManEvents() {
-
-}
-
-function viewBatManEvents() {
-
-}
 
 $(document).ready(function() {
     $(".nav-tabs a").click(function() {
@@ -60,7 +53,6 @@ $(document).ready(function() {
         document.getElementById("date").value = "";
         document.getElementById("regstatLabel").innerHTML = "";
         document.getElementById("voteridTxt").value = "";
-        document.getElementById("balloteventTxtarea").innerHTML = "";
 
     });
 
