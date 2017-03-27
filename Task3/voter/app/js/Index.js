@@ -1,4 +1,4 @@
-/*@Author Abhinav Halra
+/*@Author Abhinav Kalra
  * Javascript for front end interaction with Ballot Contract
  * Ethereum and Blockchain Workshop : 29 Mar,2017
  */
