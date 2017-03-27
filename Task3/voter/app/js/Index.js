@@ -34,16 +34,19 @@ function castVote() {
                 window.alert("Batman voted successfully! " + 'Transaction =' + value);
             });
         }
+else  window.alert("Vote rigging !!!!! Bad Hombre!!"); 
     }
+	
     if (document.getElementById("iradio").checked === true) {
         if (MordorVote.Vote.call(voteid, 2) != "User not found") {
             MordorVote.Vote(voteid, 2, { gas: 500000 }).then(function(value) {
                 window.alert("Ironman voted successfully! " + 'Transaction =' + value);
             });
         }
+else window.alert("Vote rigging !!!!! Bad Hombre!!");
     }
+	
 }
-
 
 $(document).ready(function() {
     $(".nav-tabs a").click(function() {
