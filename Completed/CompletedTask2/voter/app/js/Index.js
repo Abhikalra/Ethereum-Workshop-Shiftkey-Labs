@@ -12,7 +12,6 @@ function doSomeStartupStuff() {
     date_input.datepicker(options);
     // add your embarkJS event listener here to initialize the web3 filter at page load
 }
-
 function registerVoter() {
     var fname = document.getElementById("firstnameTxt").value;
     var lname = document.getElementById("lastnameTxt").value;
@@ -22,7 +21,6 @@ function registerVoter() {
         var vid = MordorVote.GetVoterId.call(lname, dob);
         window.alert(vid);
     });
-
 }
 
 function castVote() {
@@ -34,22 +32,18 @@ function castVote() {
                 window.alert("Batman voted successfully! " + 'Transaction =' + value);
             });
         }
+else  window.alert("Vote rigging !!!!! Bad Hombre!!"); 
     }
+	
     if (document.getElementById("iradio").checked === true) {
         if (MordorVote.Vote.call(voteid, 2) != "User not found") {
             MordorVote.Vote(voteid, 2, { gas: 500000 }).then(function(value) {
                 window.alert("Ironman voted successfully! " + 'Transaction =' + value);
             });
         }
+else window.alert("Vote rigging !!!!! Bad Hombre!!");
     }
-}
-
-function viewIronManEvents() {
-
-}
-
-function viewBatManEvents() {
-
+	
 }
 
 $(document).ready(function() {
@@ -60,7 +54,6 @@ $(document).ready(function() {
         document.getElementById("date").value = "";
         document.getElementById("regstatLabel").innerHTML = "";
         document.getElementById("voteridTxt").value = "";
-        document.getElementById("balloteventTxtarea").innerHTML = "";
 
     });
 
