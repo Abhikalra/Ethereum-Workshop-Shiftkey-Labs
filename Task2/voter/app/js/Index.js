@@ -17,21 +17,13 @@ function doSomeStartupStuff() {
 
 function registerVoter() {
     var fname = document.getElementById("firstnameTxt").value;
-    var lname = document.getElementById("lastnameTxt").values;
+    var lname = document.getElementById("lastnameTxt").value;
     var dob = document.getElementById("date").value;
 
 
 }
 
 function castVote() {
-
-}
-
-function viewIronManEvents() {
-
-}
-
-function viewBatManEvents() {
 
 }
 
@@ -43,7 +35,6 @@ $(document).ready(function() {
         document.getElementById("date").value = "";
         document.getElementById("regstatLabel").innerHTML = "";
         document.getElementById("voteridTxt").value = "";
-        document.getElementById("balloteventTxtarea").innerHTML = "";
 
     });
 
