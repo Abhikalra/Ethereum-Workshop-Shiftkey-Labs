@@ -11,7 +11,7 @@ function doSomeStartupStuff() {
     var date_input = $('input[name="date"]');
     date_input.datepicker(options);
 
-    MordorVote.superherovotes({ from: web3.eth.accounts }, 'latest').then(function(event) {
+    MordorVote.superherovote({ from: web3.eth.accounts }, 'latest').then(function(event) {
         document.getElementById("balloteventTxtarea").innerHTML += JSON.stringify(event.args) + "\n";
     });
     // add your embarkJS event listener here to initialize the web3 filter at page load
@@ -37,17 +37,19 @@ function castVote() {
                 window.alert("Batman voted successfully! " + 'Transaction =' + value);
             });
         }
+else  window.alert("Vote rigging !!!!! Bad Hombre!!"); 
     }
+	
     if (document.getElementById("iradio").checked === true) {
         if (MordorVote.Vote.call(voteid, 2) != "User not found") {
             MordorVote.Vote(voteid, 2, { gas: 500000 }).then(function(value) {
                 window.alert("Ironman voted successfully! " + 'Transaction =' + value);
             });
         }
+else window.alert("Vote rigging !!!!! Bad Hombre!!");
     }
+	
 }
-
-
 
 $(document).ready(function() {
     $(".nav-tabs a").click(function() {
