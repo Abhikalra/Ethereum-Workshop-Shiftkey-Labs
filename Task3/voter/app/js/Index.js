@@ -14,11 +14,11 @@ function doSomeStartupStuff() {
 }
 
 function registerVoter() {
-    var fname = document.getElementById("firstnameTxt").value;
-    var lname = document.getElementById("lastnameTxt").value;
+    var fName = document.getElementById("firstnameTxt").value;
+    var lName = document.getElementById("lastnameTxt").value;
     var dob = document.getElementById("date").value;
     ///////////////////////////////////////////////////////////////////////////////////////////
-    MordorVote.CreateUser(fname, lname, dob, { gas: 500000 }).then(function(value) {
+    MordorVote.CreateUser(fName, lName, dob, { gas: 500000 }).then(function(value) {
         var vid = MordorVote.GetVoterId.call(lname, dob);
         window.alert(vid);
     });
@@ -34,9 +34,9 @@ function castVote() {
                 window.alert("Batman voted successfully! " + 'Transaction =' + value);
             });
         }
-else  window.alert("Vote rigging !!!!! Bad Hombre!!"); 
+else  window.alert("Vote rigging !!!!! Bad Hombre!!");
     }
-	
+
     if (document.getElementById("iradio").checked === true) {
         if (MordorVote.Vote.call(voteid, 2) != "User not found") {
             MordorVote.Vote(voteid, 2, { gas: 500000 }).then(function(value) {
@@ -45,7 +45,7 @@ else  window.alert("Vote rigging !!!!! Bad Hombre!!");
         }
 else window.alert("Vote rigging !!!!! Bad Hombre!!");
     }
-	
+
 }
 
 $(document).ready(function() {
